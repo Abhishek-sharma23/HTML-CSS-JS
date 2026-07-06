@@ -1,0 +1,76 @@
+/* BODY */
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    perspective: 64rem;
+    perspective-origin: center;
+    background: #000;
+    font-size: 1vmin;
+}
+
+/* COMMON DIV SETUP */
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+}
+
+/* MAIN CONTAINER */
+.s6hedron {
+    transform: translate(-50%, -50%) rotateX(-35deg) rotateY(45deg);
+}
+
+/* ROTATION */
+.rotor {
+    animation: a 13s linear infinite;
+}
+
+/* ANIMATION */
+@keyframes a {
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* CUBE FACE */
+.s4gon {
+    margin: -16em;
+    width: 32em;
+    height: 32em;
+
+    /* fallback visibility */
+    background-color: rgb(124, 216, 3);
+    border: 1px solid #000000;
+
+    background-image: url(https://shorturl.at/amADX);
+    background-repeat: no-repeat;
+    background-size: 400% 300%;
+}
+
+/* FACES POSITIONING */
+.s4gon:nth-child(1) {
+    transform: rotateY(0deg) translateZ(16em);
+    background-position: -32em -32em;
+}
+.s4gon:nth-child(2) {
+    transform: rotateY(90deg) translateZ(16em);
+    background-position: -64em -32em;
+}
+.s4gon:nth-child(3) {
+    transform: rotateY(180deg) translateZ(16em);
+    background-position: -96em -32em;
+}
+.s4gon:nth-child(4) {
+    transform: rotateY(270deg) translateZ(16em);
+    background-position: 0em -32em;
+}
+.s4gon:nth-child(5) {
+    transform: rotateX(90deg) translateZ(16em);
+    background-position: -32em 0em;
+}
+.s4gon:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(16em);
+    background-position: -32em -64em;
+}
